@@ -437,16 +437,8 @@
         }
     };
     
-    if (animated) {
-        [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-        [UIView animateWithDuration:self.animationDuration animations:^{
-        } completion:^(BOOL finished) {
-            [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-            completionBlock();
-        }];
-    } else {
-        completionBlock();
-    }
+    completionBlock();
+    
     [self statusBarNeedsAppearanceUpdate];
 }
 
