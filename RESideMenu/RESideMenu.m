@@ -204,13 +204,13 @@
     [self.view addSubview:self.contentViewContainer];
     
     self.menuViewContainer.frame = CGRectMake(-280, 0, 280, self.view.bounds.size.height);
-    self.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+    //    self.view.frame = CGRectMake(0, 0, 280, self.view.bounds.size.height);
     //    self.menuViewContainer.frame = CGRectMake(-(self.view.bounds.size.height-60), 0, 0, self.view.bounds.size.height);
-    //    self.menuViewContainer.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.menuViewContainer.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     if (self.leftMenuViewController) {
         [self addChildViewController:self.leftMenuViewController];
-        self.leftMenuViewController.view.frame = CGRectMake(-280, 0, 280, self.view.bounds.size.height);
+        self.leftMenuViewController.view.frame = CGRectMake(0, 0, 280, self.view.bounds.size.height);
         [self.menuViewContainer addSubview:self.leftMenuViewController.view];
         [self.leftMenuViewController didMoveToParentViewController:self];
     }
@@ -935,4 +935,3 @@
 }
 
 @end
-
